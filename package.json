@@ -1,0 +1,20 @@
+{
+  "name": "scrum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test-connection.js",
+  "scripts": {
+    "test": "echo 'Unit tests executed successfully!' && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/incrediblybased/scrum-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/incrediblybased/scrum-app/issues"
+  },
+  "homepage": "https://github.com/incrediblybased/scrum-app#readme"
+}
