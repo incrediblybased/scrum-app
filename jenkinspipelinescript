@@ -1,0 +1,32 @@
+pipeline {
+    agent any // Runs the pipeline on any available execution slot
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Pulls the code from your specific GitHub repository
+                git url: 'https://github.com/incrediblybased/scrum-app.git', branch: 'main'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                echo 'Compiling and building the source code...'
+                // If using Maven, you would use: sh 'mvn clean compile'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                echo 'Running unit tests...'
+                // If using Maven, you would use: sh 'mvn test'
+            }
+        }
+    }
+    
+    post {
+        always {
+            echo 'Pipeline run completed. Cleaning up workspace...' // Executes regardless of build success/failure
+        }
+    }
+}
