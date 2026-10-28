@@ -1,0 +1,56 @@
+# ==============================================================================
+# GIT VERSION CONTROL EXPERIMENT: COMPLETE COMMAND SEQUENCE
+# ==============================================================================
+
+# --- PHASE A: ENVIRONMENT SETUP & INITIALIZATION ---
+# 1. Set global user identity details
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+
+# 2. Create and navigate into a test project directory
+mkdir git-experiment && cd git-experiment
+
+# 3. Initialize the directory as a Git repository
+git init
+
+# --- PHASE B: STANDARD WORKFLOW (EDIT -> STAGE -> COMMIT) ---
+# 4. Create a plain text file
+echo "Initial experimental application logic." > app.py
+
+# 5. Check the status of the tracking tree
+git status
+
+# 6. Add the file to the staging index
+git add app.py
+
+# 7. Snapshot the staged items with a contextual description
+git commit -m "Initial commit: Add core app framework"
+
+# --- PHASE C: BRANCHING AND ISOLATION MECHANICS ---
+# 8. Create a new development branch
+git branch feature-login
+
+# 9. Switch the active HEAD pointer to the new branch
+git checkout feature-login
+
+# 10. Simulate feature updates by modifying the file
+echo "Added user authentication methods." >> app.py
+
+# 11. Review modifications, stage, and commit on the branch
+git diff
+git add app.py
+git commit -m "Feat: Implement login validations"
+
+# --- PHASE D: MERGING AND INTEGRATION ---
+# 12. Switch context back to the main timeline
+git checkout main
+
+# 13. Merge the feature branch changes into main
+git merge feature-login
+
+# 14. Safely purge the local feature branch pointer
+git branch -d feature-login
+
+# --- PHASE E: INSPECTION & AUDITING ---
+# 15. View structured commits with visual branch graphs
+git log --oneline --graph --all
