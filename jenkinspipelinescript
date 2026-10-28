@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Pulls the code from your specific GitHub repository
-                git url: 'https://github.com/incrediblybased/scrum-app.git', branch: 'main'
+                git url: 'https://github.com/incrediblybased/scrum-app.git', branch: 'SCRUM-1-devops-setup'
             }
         }
         
